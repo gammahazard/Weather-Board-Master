@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+       />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid main-container bg-dark"><!-- weather dashboard title-->
+        <div class="container">
+            <nav class="navbar navbar-dark bg-dark">
+                <a href="#" class="navbar-brand">What's the weather like?</a>
+            </nav>
+        </div>
+    </div>
+<!-- whole container-->
+    <div class="container">
+<!-- whole row container-->
+        <div class="row">
+            <div class="col-md-3"><!--search bar div + search history-->
+<!--search bar-->
+                <div class="input-group mt-5">
+                    <input type="text" class="form-control input-search" placeholder="Search for a city"
+                        aria-label="City search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="#search-btn"><i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+
+
+<!-- search history title-->
+                <h4 class="mt-5"><em>Search History</em></h4>
+<!-- search history list-->
+                <ul class="list-group mt-3"></ul>
+
+            </div>
+<!-- spacing, error display-->
+            <div class="col offset-md-1">
+
+                <div class="alert alert-danger mt-5" role="alert">
+                    City does not exist or was spelt incorrectly!
+                </div>
+<!--div for  forecast to be appended too-->
+                <div id="today"></div>
+<!--5 day forecast-->
+                <div class="row mt-5 forecast-row"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+       ></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
